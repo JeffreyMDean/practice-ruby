@@ -16,7 +16,7 @@ book = {:color => "green", :price => 7}
 
 class Item
   attr_reader :color, :price
-  
+
   def initialize(input_color, input_price)
     @color = input_color
     @price = input_price
@@ -28,9 +28,16 @@ class Item
 end
 
 item1 = Item.new("red", 28)
-item2 = Item.new("purple", 50)
 
-p item1, item2
+p item1
 
+# Rewrite your store items using a class with a single options hash in the initialize method.
+
+def input_options
+color = input_options(:color) 
+price = input_options(:price)
+end
+
+item = [{}]
 
 
