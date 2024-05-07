@@ -41,7 +41,7 @@ puts "Color: #{pen.color}"
 puts "Price: #{pen.price}"
 
 pen.price = 3
-puts "Adjusted price: #{pen.price}"
+puts "Adjusted price: $#{pen.price}"
 
 
 
