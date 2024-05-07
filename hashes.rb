@@ -9,8 +9,8 @@ item2 = {name: "charger", color: "black", price: 20}
 item3 = {name: "book", color: "green", price: 7}
 
 item1 = {name: "pen", :color => "blue", :price => 1}
-item2 = {name: "charger":color => "black", :price => 20}
-item3 = {name: "book":color => "green", :price => 7}
+item2 = {name: "charger", :color => "black", :price => 20}
+item3 = {name: "book", :color => "green", :price => 7}
 
 # Rewrite your store items using a class instead of a hash.
 # a) Choose which attributes should have “reader” methods and which attributes should have “writer” methods.
@@ -18,7 +18,7 @@ item3 = {name: "book":color => "green", :price => 7}
 # c) Use the attr_writer method to change a value
 
 class Item
-  attr_reader :name :color, :price
+  attr_reader :name, :color, :price
   attr_writer :price
 
   def initialize(input_name, input_color, input_price)
@@ -29,21 +29,26 @@ class Item
   end
 
   def print_info
-    puts "#{name} #{color} #{price}"
+    puts "#{name} #{color} $#{price}"
   end
 end
 
+pen = Item.new("Gel Pen", "blue", 2)
+puts "Name: #{pen.name}"
+puts "Color: #{pen.color}"
+puts "Price: #{pen.price}"
 
-
-puts "Item: #{pen.name}"
+pen.price = 3
+puts "Adjusted price: #{pen.price}"
 
 # Rewrite your store items using a class with a single options hash in the initialize method.
 
-def input_options
-color = input_options(:color) 
-price = input_options(:price)
-end
+# def input_options(input_options = {})
+# @name = input_options[:name]
+# @color = input_options[:color]
+# @price = input_options[:price]
+# end
 
-item = [{input_options(:color), input_options(:price)}]
+# item = [{input_options(:color), input_options(:price)}]
 
 
