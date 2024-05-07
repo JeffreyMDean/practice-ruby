@@ -27,7 +27,6 @@ class Item
     @name = input_options[:name]
     @color = input_options[:color]
     @price = input_options[:price]
-
   end
 
   def print_info
