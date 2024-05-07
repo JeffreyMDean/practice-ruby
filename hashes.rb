@@ -4,11 +4,6 @@
 # C.3 - Be sure to use symbols for the keys. Try creating hashes using both types of hash symbol syntaxes. (Ruby syntax {:a => 123} vs. “JavaScript” syntax {a: 123}).
 # Bonus: Read more about Ruby array and hash methods. Explore using different methods in your code.
 
-# Rewrite your store items using a class instead of a hash.
-# a) Choose which attributes should have “reader” methods and which attributes should have “writer” methods.
-# b) Create an instance from your store item class. Use puts statements to print the 3 attributes individually to the terminal.
-# c) Use the attr_writer method to change a value
-
 pen = {color: "blue", price: 1}
 charger = {color: "black", price: 20}
 book = {color: "green", price: 7}
@@ -17,9 +12,14 @@ pen = {:color => "blue", :price => 1}
 charger = {:color => "black", :price => 20}
 book = {:color => "green", :price => 7}
 
+# Rewrite your store items using a class instead of a hash.
+# a) Choose which attributes should have “reader” methods and which attributes should have “writer” methods.
+# b) Create an instance from your store item class. Use puts statements to print the 3 attributes individually to the terminal.
+# c) Use the attr_writer method to change a value
 
 class Item
   attr_reader :color, :price
+  attr_write :price
 
   def initialize(input_color, input_price)
     @color = input_color
@@ -31,9 +31,9 @@ class Item
   end
 end
 
-item1 = Item.new("red", 28)
+basketball = Item.new("orange", 14)
 
-p item1
+p item1, item2, item3
 
 # Rewrite your store items using a class with a single options hash in the initialize method.
 
