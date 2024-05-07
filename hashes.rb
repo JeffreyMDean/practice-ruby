@@ -4,6 +4,7 @@
 # C.3 - Be sure to use symbols for the keys. Try creating hashes using both types of hash symbol syntaxes. (Ruby syntax {:a => 123} vs. “JavaScript” syntax {a: 123}).
 # Bonus: Read more about Ruby array and hash methods. Explore using different methods in your code.
 
+
 pen = {color: "blue", price: 1}
 charger = {color: "black", price: 20}
 book = {color: "green", price: 7}
@@ -11,6 +12,7 @@ book = {color: "green", price: 7}
 pen = {:color => "blue", :price => 1}
 charger = {:color => "black", :price => 20}
 book = {:color => "green", :price => 7}
+
 
 class Item
   def initialize(input_color, input_price)
@@ -29,6 +31,11 @@ class Item
   def print_info
     puts "#{color} #{price}"
   end
+
+  item1 = Item.new("red", 28)
+  item2 = Item.new("purple", 50)
+
+  p item1, item2
 
 end
 
