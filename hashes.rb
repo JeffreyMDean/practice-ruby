@@ -4,13 +4,13 @@
 # C.3 - Be sure to use symbols for the keys. Try creating hashes using both types of hash symbol syntaxes. (Ruby syntax {:a => 123} vs. “JavaScript” syntax {a: 123}).
 # Bonus: Read more about Ruby array and hash methods. Explore using different methods in your code.
 
-pen = {color: "blue", price: 1}
-charger = {color: "black", price: 20}
-book = {color: "green", price: 7}
+item1 = {name: "pen", color: "blue", price: 1}
+item2 = {name: "charger", color: "black", price: 20}
+item3 = {name: "book", color: "green", price: 7}
 
-pen = {:color => "blue", :price => 1}
-charger = {:color => "black", :price => 20}
-book = {:color => "green", :price => 7}
+item1 = {name: "pen", :color => "blue", :price => 1}
+item2 = {name: "charger":color => "black", :price => 20}
+item3 = {name: "book":color => "green", :price => 7}
 
 # Rewrite your store items using a class instead of a hash.
 # a) Choose which attributes should have “reader” methods and which attributes should have “writer” methods.
@@ -18,22 +18,24 @@ book = {:color => "green", :price => 7}
 # c) Use the attr_writer method to change a value
 
 class Item
-  attr_reader :color, :price
-  attr_write :price
+  attr_reader :name :color, :price
+  attr_writer :price
 
-  def initialize(input_color, input_price)
+  def initialize(input_name, input_color, input_price)
+    @name = input_name
     @color = input_color
     @price = input_price
+
   end
 
   def print_info
-    puts "#{color} #{price}"
+    puts "#{name} #{color} #{price}"
   end
 end
 
-basketball = Item.new("orange", 14)
 
-p item1, item2, item3
+
+puts "Item: #{pen.name}"
 
 # Rewrite your store items using a class with a single options hash in the initialize method.
 
