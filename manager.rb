@@ -43,14 +43,14 @@ class Manager < Employee
 
   def give_all_raises
     p "giving everyone a raise..."
-    @employees[0] #employee1.give_annual_raise
-    @employees[1] #employee1.give_annual_raise
+    @employees.each do |employee|
+      employee.give_annual_raise
   end 
 
   def fire_all_employees
     p "firing :("
     @employees.each do |employee|
-      employees.active = false
+      employee.active = false
     end
   end
 end
