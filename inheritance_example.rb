@@ -49,5 +49,14 @@ class Bike
   end
 end
 
-class Bike < Car
-car = Car.new()
+car = Car.new
+car.honk_horn
+car.ring_bell
+
+bike = Bike.new
+bike.honk_horn
+bike.ring_bell
+
+# put shared functionality in a thrid class
+
+
