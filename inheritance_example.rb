@@ -35,13 +35,11 @@ class Bike < WheeledVehicle
 end
 
 car = Car.new
-car.accelerate
+p car.accelerate
 car.honk_horn
 
 bike = Bike.new
-bike.accelerate
+p bike.accelerate
 bike.ring_bell
-
-# put shared functionality in a thrid class
 
 
