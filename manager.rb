@@ -45,6 +45,7 @@ class Manager < Employee
     p "giving everyone a raise..."
     @employees.each do |employee|
       employee.give_annual_raise
+    end
   end 
 
   def fire_all_employees
@@ -56,7 +57,7 @@ class Manager < Employee
 end
 
 manager = Manager.new(first_name: "Saron", last_name: "Yitbarek", salary: 100000, active: true, employees: [employee1, employee2])
-manager1.fire_all_employees
+manager.fire_all_employees
 p employee1
 p employee2
 
