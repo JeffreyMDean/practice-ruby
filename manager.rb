@@ -35,7 +35,12 @@ class Manager < Employee
     @employees = input_options[:employees]
   end
 
-  index = 0
+  def send_report
+    puts "Sending email..."
+    # use email sending library...
+    puts "Email sent!"
+  end
+
   def give_all_raises
     p "giving everyone a raise..."
     @employees[0] #employee1.give_annual_raise
@@ -45,16 +50,13 @@ class Manager < Employee
   def fire_all_employees
     p "firing :("
     @employees.each do |employee|
-    p employees[0].active = false
-
-  def send_report
-    puts "Sending email..."
-    # use email sending library...
-    puts "Email sent!"
+      employees.active = false
+    end
   end
 end
 
 manager = Manager.new(first_name: "Saron", last_name: "Yitbarek", salary: 100000, active: true, employees: [employee1, employee2])
-manager.print_info
-manager.send_report
+manager1.fire_all_employees
+p employee1
+p employee2
 
