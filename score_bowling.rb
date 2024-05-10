@@ -11,7 +11,8 @@
 # Shovel points in to the empty array for storing points
 # Write something that keeps track of how many pins are knocked down in a single turn
 # Define a method called strike
-# Within the method give the person 10 points and end the player's turn
+# Write a condition that accounts for the possibility of the first bowl being a strike
+# Within the method give the person 10 points and end the player's turn 
 # Define a method called score 
 # Within the method create an each loop 
 # Get the sum of the total number of pins knocked down for the entire game
@@ -35,13 +36,13 @@ def pins_down_turn
   #
 end
 
-  def strike
+  def strike  # add condition that accounts for first bowl being a strike (end players turn)
     if pins.pins_down_turn == 10
       puts "Strike"
       pins = pins + 10
     end
   end
-  
+
   def roll
     # counts number of pins knocked down (start some sort of loop here)
     # allow for a second bowl
