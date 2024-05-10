@@ -52,6 +52,12 @@ end
   return total_points
 end
 
+def score
+  # each loop
+  # sum of total pins knocked down
+  # return sum
+end
+
 
 
     
